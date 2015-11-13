@@ -1,9 +1,6 @@
-<!-- <%= simple_form_for @post do |f| %>
-  <%= f.input :image %>
-  <%= f.input :caption %>
-  <%= f.button :submit %>
-<% end %> -->
-
+<div class="text-center">
+  <%= image_tag @post.image.url(:medium) %>
+</div>
 <div class="form-wrapper">
   <%= simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f| %>
     <div class="form-group">
@@ -17,5 +14,3 @@
     </div>
   <% end %>
 </div>
-
-<!-- form with bootstrap called on it -->
